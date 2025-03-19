@@ -1,0 +1,169 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    /* Azul oscuro profundo */
+    color: black;
+    /* Texto blanco para contraste */
+    min-height: 100vh;
+}
+
+.navbar-brand img {
+    border-radius: 50%;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Cards styling */
+
+.card {
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Estilos personalizados para el modal */
+
+.modal-dialog-end {
+    position: fixed;
+    top: 75px;
+    /* Ajusta este valor según la altura de tu navbar */
+    right: 20px;
+    margin: 0;
+    height: 310px;
+    /* Ajusta la altura para que no cubra el navbar */
+}
+
+.modal-content {
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 8px;
+}
+
+.modal-header {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.modal-body {
+    overflow-y: auto;
+    /* Permite el desplazamiento si el contenido es largo */
+    color: #000000;
+}
+
+.form-control {
+    background-color: #ffffff;
+    border: 1px solid #ced4da;
+    color: #000000;
+}
+
+.form-control::placeholder {
+    color: #6c757d;
+}
+
+.form-label {
+    color: #000000;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: #ffffff;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+
+/* Alert positioning */
+
+.alert {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    border-radius: 0;
+    z-index: 1000;
+}
+
+
+/* Carrusel styling */
+
+#carouselExample {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+#carouselExample .carousel-item {
+    height: 100%;
+    width: 100%;
+}
+
+#carouselExample .carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Ajustar tamaño del carrusel en móviles */
+@media (max-width: 768px) {
+    #carouselExample {
+        height: 40vh;
+    }
+}
+
+@media (max-width: 576px) {
+    #carouselExample {
+        height: 30vh;
+    }
+}
+
+.container.mt-5 {
+    background-color: #1a1a2e;
+    color: white;
+    /* Fondo semitransparente */
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+}
+
+.footer {
+    padding: 1rem 0;
+}
+
+.footer .col-md-6 {
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 576px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 0.5rem;
+    }
+
+    .footer .col-md-6 {
+        text-align: center;
+    }
+}
+
+.breadcrumb {
+    color: white;
+}

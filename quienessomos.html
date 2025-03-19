@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiénes Somos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/logo.png" alt="Food Truck" width="50"> Food Truck
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item"><a class="nav-link text-primary" href="index.html">Inici</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">Entrepans</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./carta/entrepà-ibèric.html">Entrepà de ibèric</a></li>
+                                <li><a class="dropdown-item" href="./carta/entrepà-formatge.html">Entrepà formatge</a></li>
+                                <li><a class="dropdown-item" href="./carta/entrepà-pollastre.html">Entrepà de pollastre</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">Durums</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./carta/durum-pollastre.html">Durum de pollastre</a></li>
+                                <li><a class="dropdown-item" href="./carta/durum-vedella.html">Durum de vedella</a></li>
+                                <li><a class="dropdown-item" href="./carta/durum-vegetal.html">Durum vegetal</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">Tacos</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./carta/taco-pollastre.html">Taco de pollastre</a></li>
+                                <li><a class="dropdown-item" href="./carta/taco-vedella.html">Taco de vedella</a></li>
+                                <li><a class="dropdown-item" href="./carta/taco-vegetal.html">Taco vegetal</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">Begudes</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./carta/coca-cola.html">Coca Cola</a></li>
+                                <li><a class="dropdown-item" href="./carta/cervesa.html">Cervesa</a></li>
+                                <li><a class="dropdown-item" href="./carta/aigua.html">Aigua</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link text-white" href="quienessomos.html">Nosaltres</a></li>
+                    </ul>
+                    <!-- Mensaje de bienvenida (oculto inicialmente) -->
+                    <span class="navbar-text text-danger fw-bold me-3" id="userWelcome" style="display: none;">Bienvenido</span>
+                    <div>
+                        <!-- Botón de Login (visible inicialmente) -->
+                        <button class="btn btn-primary me-2" id="btnLogin"><i class="fas fa-sign-in-alt"></i> Login</button>
+                        <!-- Botón de Logout (oculto inicialmente) -->
+                        <button class="btn btn-danger" id="btnLogout" style="display: none;"><i class="fas fa-sign-out-alt"></i> Logout</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <nav aria-label="breadcrumb" class="mt-3">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Quiénes Somos</li>
+        </ol>
+    </nav>
+
+    <!-- Modal de Login -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-end">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Formulario de login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Nombre de usuario</label>
+                            <input type="text" class="form-control" id="username" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Información sobre quienes somos -->
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Quiénes Somos</h1>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Nuestra Historia</h2>
+                <p>Food Truck nació en 2015 de la pasión por la buena comida y el servicio al cliente. Empezamos como un pequeño camión en las calles de Barcelona y hoy somos una referencia en comida rápida de calidad.</p>
+            </div>
+            <div class="col-md-6">
+                <h2>Nuestra Filosofía</h2>
+                <p>Creemos en ingredientes frescos, recetas tradicionales y un toque de innovación. Cada plato que servimos es una experiencia única para nuestros clientes.</p>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <h2>Dónde Estamos</h2>
+                <p>Nuestro camión principal se encuentra en:</p>
+                <address>
+                    <strong>Food Truck Central</strong><br>
+                    Plaça de Catalunya, 08002 Barcelona<br>
+                    <i class="fas fa-phone"></i> +34 93 123 45 67
+                </address>
+            </div>
+            <div class="col-md-6">
+                <h2>Contacto</h2>
+                <p>¿Tienes alguna pregunta o sugerencia? ¡Nos encantaría escucharte!</p>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-envelope"></i> info@foodtruck.com</li>
+                    <li><i class="fas fa-phone"></i> +34 93 987 65 43</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-12">
+                <h2>Nuestro Equipo</h2>
+                <p>Detrás de Food Truck hay un equipo de profesionales apasionados por la gastronomía, desde chefs con experiencia internacional hasta jóvenes talentos con ideas innovadoras.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pagination -->
+    <nav aria-label="Page navigation" class="mt-4">
+        <ul class="pagination justify-content-center">
+            <li class="page-item"><a class="page-link" href="./carta/aigua.html">13</a></li>
+            <li class="page-item active"><a class="page-link" href="quienessomos.html">14</a></li>
+        </ul>
+    </nav>
+
+    <!-- Alert -->
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        Aquest lloc web utilitza cookies.
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center p-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <i class="fas fa-map-marker-alt fa-2x"></i>
+                    <p>On trobar-nos</p>
+                </div>
+                <div class="col-md-6">
+                    <i class="fas fa-info-circle fa-2x"></i>
+                    <p>Qui som</p>
+                </div>
+            </div>
+            <div class="mt-3">
+                <a href="#" data-bs-toggle="tooltip" title="Visita'ns a Facebook"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#" data-bs-toggle="tooltip" title="Segueix-nos a Instagram"><i class="fab fa-instagram fa-2x"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/YOUR-FONTAWESOME-KEY.js" crossorigin="anonymous"></script>
+    <script>
+        // Función para verificar el estado del usuario al cargar la página
+        function checkLoginState() {
+            const username = localStorage.getItem('username'); // Obtener el nombre de usuario del localStorage
+            const userWelcome = document.getElementById('userWelcome');
+            const btnLogin = document.getElementById('btnLogin');
+            const btnLogout = document.getElementById('btnLogout');
+
+            if (username) {
+                // Si el usuario está logueado
+                userWelcome.textContent = `Bienvenido ${username}`;
+                userWelcome.style.display = 'inline';
+                btnLogin.style.display = 'none';
+                btnLogout.style.display = 'inline';
+            } else {
+                // Si el usuario no está logueado
+                userWelcome.style.display = 'none';
+                btnLogin.style.display = 'inline';
+                btnLogout.style.display = 'none';
+            }
+        }
+
+        // Función para manejar el login
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita el envío del formulario
+
+            // Obtener el nombre de usuario
+            const username = document.getElementById('username').value;
+
+            // Guardar el nombre de usuario en localStorage
+            localStorage.setItem('username', username);
+
+            // Actualizar la interfaz
+            checkLoginState();
+
+            // Cerrar el modal
+            const modal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
+            modal.hide();
+        });
+
+        // Función para manejar el logout
+        document.getElementById('btnLogout').addEventListener('click', function() {
+            // Eliminar el nombre de usuario del localStorage
+            localStorage.removeItem('username');
+
+            // Actualizar la interfaz
+            checkLoginState();
+        });
+
+        // Función para abrir el modal de login
+        document.getElementById('btnLogin').addEventListener('click', function() {
+            var myModal = new bootstrap.Modal(document.getElementById('loginModal'));
+            myModal.show();
+        });
+
+        // Verificar el estado del usuario al cargar la página
+        checkLoginState();
+
+        // Verificar el estado del usuario al cargar la página
+        checkLoginState();
+        document.addEventListener("DOMContentLoaded", function() {
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+        });
+    </script>
+</body>
+
+</html>
